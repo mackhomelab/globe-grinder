@@ -1,6 +1,7 @@
 # globe-grinder
 
-geography-app/
+```text
+globe-grinder-backend/
 │
 ├── infra/                        # Terraform
 │   ├── main.tf
@@ -25,13 +26,8 @@ geography-app/
 │   │   └── country.py            # GET /countries/{iso}
 │   └── requirements.txt
 │
-├── ios/                          # Swift/Xcode project
-│   └── GeographyApp.xcodeproj
-│
-├── web/                          # Future web client (placeholder is fine)
-│   └── .gitkeep
-│
 └── .github/
     └── workflows/
         ├── sync-data.yml         # periodic data refresh
         └── deploy-infra.yml      # Terraform apply on merge
+```

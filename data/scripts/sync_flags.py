@@ -20,6 +20,8 @@ url = "https://restcountries.com/v3.1/all?fields=cca2,cca3,name,capital,language
 response = requests.get(url, timeout=30)
 response.raise_for_status()
 
+countries = response.json()
+
 for c in countries:
     try:
         iso2 = c["cca2"]

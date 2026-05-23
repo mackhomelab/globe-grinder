@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-
+import json
 import boto3
 import requests
 from requests.exceptions import RequestException
@@ -101,6 +101,12 @@ print("\nFlag sync complete.")
 
 # Sort alphabetically
 country_data.sort(key=lambda x: x["name"])
+
+# Save countries.json locally
+with open(COUNTRIES_JSON, "w", encoding="utf-8") as f:
+    json.dump(country_data, f, ensure_ascii=False, indent=2)
+
+print(f"Saved countries JSON to {COUNTRIES_JSON}")
 
 # Upload countries.json to S3
 try:

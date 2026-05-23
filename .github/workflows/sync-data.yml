@@ -35,3 +35,8 @@ jobs:
         env:
           FLAGS_BUCKET: ${{ secrets.FLAGS_BUCKET }}
         run: python data/scripts/sync_countries.py
+
+      - name: Fetch GeoJSON
+        env:
+          FLAGS_BUCKET: ${{ secrets.FLAGS_BUCKET }}
+        run: python data/scripts/fetch_geoJSON.py

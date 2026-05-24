@@ -1,6 +1,7 @@
-module "flags_storage" {
+module "storage" {
+
   source = "./modules/storage"
 
-  bucket_name = var.flags_bucket_name
+  bucket_name = "globe-grinder-dev-04008"
+  environment = "dev"
 }
-
